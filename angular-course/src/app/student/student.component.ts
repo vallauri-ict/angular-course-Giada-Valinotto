@@ -19,12 +19,22 @@ studentList=[
   {name: 'Giada Valinotto', hobby: 'Skincare', gender: 'F'},
   {name: 'Gabriele Leone', hobby: 'Palestra', gender: 'M'},
 ];
+
 student : any = {};
-  constructor() {
-    let num = Math.floor(Math.random()*this.studentList.length);
-    this.student= this.studentList[num];
+
+constructor() {
+      this.randomStudent();
   }
 
+private randomStudent()
+{
+  let num = Math.floor(Math.random()*this.studentList.length);
+  this.student= this.studentList[num];
+}
+onStudentClick()
+{
+  this.randomStudent();
+}
   ngOnInit(): void {
   }
 
