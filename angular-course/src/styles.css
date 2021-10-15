@@ -1,5 +1,6 @@
-/*Global styles to this file, and also import other style files */
-.cliccable {
-    cursor:pointer;
-    padding: 4px;
+/* You can add global styles to this file, and also import other style files */
+.clickable
+{
+    cursor: pointer;
+    padding: 4px 10px;
 }
