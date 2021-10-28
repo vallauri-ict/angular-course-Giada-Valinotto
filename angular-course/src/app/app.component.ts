@@ -20,7 +20,7 @@ export class AppComponent{
     {name:'Martina Velardi',hobby:'paddle',gender:'F', isPro: false},
     // {name:'Alberto Savoldelli',hobby:'volley',gender:'M', isPro: false},
   ]
-  hobbies = ['karate','paddle','volley','golf','tennis','programming'];
+  hobbies = ['karate','paddle','volley','golf','tennis','programming', 'basket'];
   //studentList:any[]=[]
   studentName:string = "";
   studentGender: string="M";
@@ -31,5 +31,8 @@ export class AppComponent{
     this.studentList.push(newStudent);
     this.studentName="";
     console.log(this.studentList);
+  }
+  onDeleteStudent(index:number){
+    this.studentList.splice(index,1);
   }
 }
