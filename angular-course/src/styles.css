@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+button{
+  background-color:#125699;
+  color: whitesmoke;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+.delete{
+background-color: coral;
+margin-left: 16px;
+padding-top: 5px;
+padding-bottom: 5px;
+height: 30px;
+}
+button:disabled{
+  background-color: gainsboro;
+}

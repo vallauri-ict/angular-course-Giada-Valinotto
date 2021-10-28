@@ -38,8 +38,9 @@
 
   <div class="student" *ngFor="let item of studentList; let i = index">
     <span>{{i+1}} => </span>
-    <app-student [student]="item"></app-student>
-    <button (click)="onDeleteStudent(i)" class="delete">Detele</button>
+    <app-student [student]="item"></app-student> <!--Parametro fisso, ovvero ciò che è stato passato dal parent-->
+    <!-- <button (click)="onDeleteStudent(i)" class="delete">Detele</button> -->
+    <button  (deleteEvent)="onDeleteStudent($event)" class="delete">Delete</button>
   </div>
 
   <h2>Add students</h2>

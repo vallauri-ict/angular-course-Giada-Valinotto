@@ -1,10 +1,12 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output } from '@angular/core';
+import { StudentComponent } from './student/student.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent{
   @ViewChild("txtName") txtName !: ElementRef;
   title = 'Giada Valinotto 5B';
@@ -32,7 +34,7 @@ export class AppComponent{
     this.studentName="";
     console.log(this.studentList);
   }
-  onDeleteStudent(index:number){
-    this.studentList.splice(index,1);
+  onDeleteStudent(student:any){
+    this.studentList.splice(this.studentList.indexOf(student),1);
   }
 }
